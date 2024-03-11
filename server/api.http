@@ -1,0 +1,74 @@
+@baseURL = http://localhost:5172/api
+
+### create an user
+POST {{baseURL}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "brody",
+    "password": "brotod123"
+}
+
+
+### get all users
+GET {{baseURL}}/users HTTP/1.1
+
+
+### update an user
+PUT {{baseURL}}/users/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "password": "lynyrdskynyard"
+}
+
+
+### delete an user
+DELETE {{baseURL}}/users/2 HTTP/1.1
+
+
+### create an todo
+POST {{baseURL}}/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "swimming"
+}
+
+
+### get all todos
+GET {{baseURL}}/todos HTTP/1.1
+
+
+### update an todo
+PUT {{baseURL}}/todos/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "jogging",
+    "completed":true
+}
+
+
+### delete an todo
+DELETE {{baseURL}}/todos/1 HTTP/1.1
+
+
+### register
+POST {{baseURL}}/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "user:1",
+    "email": "user_1@gmail.com",
+    "password": "1234"
+}
+
+### login
+POST {{baseURL}}/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "user:1",
+    "password": "1234"
+}
